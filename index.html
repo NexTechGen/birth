@@ -2,21 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🎂 Happy Birthday, Suraif.T! 🎉</title>
-    <link rel="icon" href="assets/icons/cake.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Suraif!</title>
     <style>
-        /* 🌈 Base Styles */
         body {
-            margin: 0;
-            font-family: "Comic Sans MS", cursive;
-            background: linear-gradient(270deg, #ff9ff3, #feca57, #54a0ff, #5f27cd, #ff6b6b);
-            background-size: 1000% 1000%;
-            animation: gradientShift 15s ease infinite;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24);
+            background-size: 400% 400%;
+            animation: gradientShift 5s ease infinite;
+            color: white;
             text-align: center;
-            color: #fff;
-            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
 
         @keyframes gradientShift {
@@ -33,331 +32,156 @@
             }
         }
 
-        /* 🎉 Header */
-        h1 {
-            font-size: 3em;
-            margin-top: 40px;
-            color: #fff;
-            text-shadow: 3px 3px 15px #ff9ff3, 0 0 25px #54a0ff;
-            animation: glow 1.5s infinite alternate;
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            animation: bounceIn 2s ease-out;
         }
 
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 10px #fff, 0 0 20px #fd79a8;
-            }
-
-            to {
-                text-shadow: 0 0 20px #fff, 0 0 40px #feca57;
-            }
-        }
-
-        /* 🖼️ Photo */
-        .photo {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            border: 8px solid #ff9ff3;
-            box-shadow: 0 0 25px #fff;
-            animation: bounce 2s infinite;
-            opacity: 0;
-            transition: opacity 1.5s ease-in;
-            margin-top: 15px;
-        }
-
-        .photo.show {
-            opacity: 1;
-        }
-
-        @keyframes bounce {
-
-            0%,
-            100% {
-                transform: translateY(0);
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
             }
 
             50% {
-                transform: translateY(-12px);
-            }
-        }
-
-        /* ✨ Text sections */
-        .emoji-dance {
-            font-size: 2.5em;
-            animation: dance 1s infinite alternate;
-            margin: 15px;
-        }
-
-        @keyframes dance {
-            from {
-                transform: rotate(-10deg) scale(1);
+                transform: scale(1.05);
             }
 
-            to {
-                transform: rotate(10deg) scale(1.2);
-            }
-        }
-
-        .wishes {
-            font-size: 1.4em;
-            margin: 25px auto;
-            width: 85%;
-            animation: fadeIn 2s ease-in;
-            line-height: 1.5em;
-        }
-
-        .kidding {
-            font-size: 1.1em;
-            color: #ffeaa7;
-            margin: 15px auto;
-            width: 85%;
-            animation: fadeIn 3s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
+            70% {
+                transform: scale(0.9);
             }
 
-            to {
+            100% {
+                transform: scale(1);
                 opacity: 1;
             }
         }
 
-        /* 🤣 Button */
-        button {
-            background: #ff6b6b;
-            color: white;
-            border: none;
-            padding: 12px 25px;
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: textGlow 2s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+            }
+
+            to {
+                text-shadow: 0 0 20px #ff6b6b, 0 0 30px #ff6b6b, 0 0 40px #ff6b6b;
+            }
+        }
+
+        .photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 20px auto;
+            object-fit: cover;
+            /* prevents stretching */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            transform: rotate(0deg);
+            transition: transform 5s ease-out;
+        }
+
+        p {
             font-size: 1.2em;
-            border-radius: 25px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, background 0.3s;
+            line-height: 1.6;
+            margin: 20px 0;
         }
 
-        button:hover {
-            background: #ee5253;
-            transform: scale(1.1);
+        .funny-joke {
+            font-style: italic;
+            color: #f9ca24;
         }
 
-        /* 🎈 Balloons */
-        .balloon {
-            position: absolute;
-            width: 60px;
-            height: 80px;
-            background: radial-gradient(circle at 30% 30%, #ff7675, #d63031);
-            border-radius: 50% 50% 45% 45%;
-            animation: float 6s ease-in-out infinite;
-            opacity: 0.85;
+        .tamil {
+            font-size: 1.3em;
+            margin-top: 10px;
+            color: #ffdd59;
+            font-weight: bold;
         }
 
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-            }
-
-            100% {
-                transform: translateY(-120px) rotate(360deg);
-            }
-        }
-
-        /* 🎊 Confetti */
         .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .confetti-piece {
             position: absolute;
             width: 10px;
             height: 10px;
-            animation: fall 3s linear infinite;
+            background: #f9ca24;
+            animation: fall 5s linear infinite;
+        }
+
+        .confetti-piece:nth-child(odd) {
+            background: #ff6b6b;
         }
 
         @keyframes fall {
-            from {
-                transform: translateY(-10px) rotate(0deg);
-            }
-
-            to {
-                transform: translateY(100vh) rotate(360deg);
-            }
-        }
-
-        /* 🌟 Dust and Firecracker */
-        .dust {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            animation: dustFly 4s linear infinite;
-        }
-
-        @keyframes dustFly {
-            from {
-                transform: translateY(100vh) translateX(0);
-                opacity: 1;
-            }
-
-            to {
-                transform: translateY(-10px) translateX(40px);
-                opacity: 0;
-            }
-        }
-
-        .firecrackerDust {
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            background: radial-gradient(circle, #ff6b6b, #feca57, #fff);
-            border-radius: 50%;
-            animation: sparkFly 3s ease-out infinite;
-        }
-
-        @keyframes sparkFly {
             0% {
-                transform: translateY(0) scale(1);
-                opacity: 1;
+                transform: translateY(-100vh) rotate(0deg);
             }
 
             100% {
-                transform: translateY(-100px) scale(0);
-                opacity: 0;
-            }
-        }
-
-        /* 🎧 Audio */
-        audio {
-            margin-top: 25px;
-        }
-
-        /* 👣 Footer credit */
-        .credit {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            font-size: 0.8em;
-            color: #fff;
-            text-shadow: 1px 1px 2px #000;
-        }
-
-        .credit a {
-            color: #ffeaa7;
-            text-decoration: none;
-        }
-
-        .credit a:hover {
-            text-decoration: underline;
-        }
-
-        /* 📱 Responsive Design */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
-            }
-
-            .photo {
-                width: 160px;
-                height: 160px;
-                border-width: 6px;
-            }
-
-            .wishes,
-            .kidding {
-                font-size: 1.1em;
-                width: 90%;
-            }
-
-            button {
-                font-size: 1em;
-                padding: 10px 20px;
+                transform: translateY(100vh) rotate(360deg);
             }
         }
     </style>
 </head>
 
 <body>
-    <h1>🎉 Happy Birthday, Suraif.T! 🎂</h1>
-    <img src="assets/images/suraif.jpeg" alt="Suraif's Photo" class="photo" id="birthdayPhoto">
-
-    <div class="emoji-dance">💃🎈🕺🎉</div>
-
-    <div class="wishes">
-        <p>Hope your birthday is as amazing as your dance moves (and twice as funny)! 💫</p>
-        <p>May your cake be bigger than your problems, and your candles outnumber your worries! 🎂😂</p>
-    </div>
-
-    <div class="kidding">
-        <p>They say age is just a number… but in your case, it’s a pretty big one now! 😜</p>
-        <p>Remember — you’re not getting older, just more “vintage.” 🍷</p>
-    </div>
-
-    <button onclick="showMoreJokes()">🤣 Click for More Laughs!</button>
-
-    <div id="moreJokes" style="display: none; margin-top: 25px; font-size: 1.3em;">
-        <p>🎂 Why did the candle feel sad? Because it got blown off too soon! 😆</p>
-        <p>🎁 You’re not old… you’re just chronologically gifted! 😎</p>
-        <p>🍰 Your cake called — it said stop staring and start eating!</p>
-    </div>
-
-    <audio id="birthdayAudio" loop>
-        <source src="assets/music/Indian sing happy birthday.mp3" type="audio/mpeg">
-    </audio>
-
-    <div class="credit">
-        Made with ❤️ by <a href="https://ruzait.github.io/" target="_blank">Z.Ruzaid Ahamed</a>
+    <div class="confetti" id="confetti"></div>
+    <div class="container">
+        <h1>Happy Birthday, Suraif! 🎉</h1>
+        <img src="assets/images/suraif.jpeg" alt="Suraif's Photo" class="photo" id="photo">
+        <p>Hey buddy, my best frontend dev friend! On this special day, I just want to say: You're the CSS to my HTML,
+            the JavaScript to my life – without you, everything would be static and boring!</p>
+        <p class="funny-joke">Why did the frontend developer break up with the backend? Too many commits and not enough
+            pull requests! 😂</p>
+        <p class="tamil">எப்போதும் இன்பமாய் இருக்க
+            இனிய பிறந்தநாள் வாழ்த்துகள் 🎂 </p>
     </div>
 
     <script>
-        function showMoreJokes() {
-            const jokes = document.getElementById("moreJokes");
-            jokes.style.display = jokes.style.display === "none" ? "block" : "none";
-        }
-
-        // Balloons 🎈
-        for (let i = 0; i < 10; i++) {
-            const balloon = document.createElement("div");
-            balloon.classList.add("balloon");
-            balloon.style.left = `${Math.random() * 90}%`;
-            balloon.style.animationDelay = `${Math.random() * 5}s`;
-            document.body.appendChild(balloon);
-        }
-
-        // Confetti 🎊
-        for (let i = 0; i < 60; i++) {
-            const confetti = document.createElement("div");
-            confetti.classList.add("confetti");
-            confetti.style.left = `${Math.random() * 100}%`;
-            confetti.style.background = `hsl(${Math.random() * 360}, 100%, 70%)`;
-            confetti.style.animationDelay = `${Math.random() * 3}s`;
-            document.body.appendChild(confetti);
-        }
-
-        // Delayed reveal 🎶
-        setTimeout(() => {
-            const photo = document.getElementById("birthdayPhoto");
-            photo.classList.add("show");
-
-            const audio = document.getElementById("birthdayAudio");
-            audio.play().catch(() => console.log("Autoplay blocked, user interaction required."));
-
-            // Dust ✨
-            for (let i = 0; i < 80; i++) {
-                const dust = document.createElement("div");
-                dust.classList.add("dust");
-                dust.style.left = `${Math.random() * 100}%`;
-                dust.style.animationDelay = `${Math.random() * 2}s`;
-                document.body.appendChild(dust);
+        // Confetti generator
+        function createConfetti() {
+            const confetti = document.getElementById('confetti');
+            for (let i = 0; i < 100; i++) {
+                const piece = document.createElement('div');
+                piece.classList.add('confetti-piece');
+                piece.style.left = Math.random() * 100 + '%';
+                piece.style.animationDelay = Math.random() * 5 + 's';
+                confetti.appendChild(piece);
             }
+        }
 
-            // Firecracker 💥
-            for (let i = 0; i < 20; i++) {
-                const firecrackerDust = document.createElement("div");
-                firecrackerDust.classList.add("firecrackerDust");
-                firecrackerDust.style.left = `${45 + Math.random() * 10}%`;
-                firecrackerDust.style.top = `${230 + Math.random() * 100}px`;
-                firecrackerDust.style.animationDelay = `${Math.random() * 2}s`;
-                document.body.appendChild(firecrackerDust);
-            }
-        }, 3000);
+        // Gradual rotation of photo
+        window.onload = () => {
+            createConfetti();
+            const photo = document.getElementById('photo');
+            let angle = 0;
+            let speed = 36; // initial rotation speed
+            const rotateInterval = setInterval(() => {
+                photo.style.transform = `rotate(${angle}deg)`;
+                angle += speed;
+                if (speed > 0.2) speed *= 0.95; // gradually slows down
+                else clearInterval(rotateInterval); // stop when slow enough
+            }, 50);
+        }
     </script>
 </body>
 
